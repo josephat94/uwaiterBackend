@@ -9,7 +9,8 @@ const OrdenSchema = new Schema({
     productosOrden: [{ type: mongoose.Schema.Types.ObjectId, ref: "ProductoOrden" }],
     fechaInicio: { type: Date },
     fechaFin: { type: Date },
-    total: { type: Number }
+    total: { type: Number },
+    estado:{type:String} //creada / ordenada / EnPreparacion / preparada / pagada
 })
 
 module.exports = mongoose.model("Orden", OrdenSchema);

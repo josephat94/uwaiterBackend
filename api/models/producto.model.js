@@ -6,7 +6,10 @@ const ProductoSchema =new Schema({
     descripcion: { type: String, required: true },
     precio:{type:Number, required:true},
     categoria: {type: mongoose.Schema.Types.ObjectId, ref: "Categoria"},
-    ingredientesProducto: [{type: mongoose.Schema.Types.ObjectId, ref: "IngredienteProducto"}]
+    ingredientesProducto: [
+            {cantidad: Number, 
+            ingrediente:{type: mongoose.Schema.Types.ObjectId, ref: "Ingrediente"}}
+    ]
 
 })
 
